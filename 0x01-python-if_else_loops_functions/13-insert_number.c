@@ -1,8 +1,9 @@
-#include "list.h"
+#include "lists.h"
 /**
- *
- *
- *
+ * insert_node - Entry Point
+ * @head: parameter to check
+ * @number: parameter to check
+ * Return: insert a new node
  */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -26,7 +27,7 @@ listint_t *insert_node(listint_t **head, int number)
 			*head = new;
 			return (new);
 		}
-		if ((number >= headcopy->n) && (current->next == NULL))
+		if ((number >= headcopy->n) && (headcopy->next == NULL))
 		{
 			new->next = NULL;
 			headcopy->next = new;
