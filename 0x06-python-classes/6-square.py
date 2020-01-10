@@ -29,7 +29,7 @@ class Square:
             print()
         for i in range(self.__size):
             print("".join([" " for k in range(self.__position[0])]), end="")
-            print("".join(["#" for j in range(self.__size)]))
+            print("".join(["#" for m in range(self.__size)]))
 
     @property
     def position(self):
