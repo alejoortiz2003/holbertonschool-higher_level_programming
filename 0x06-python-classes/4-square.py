@@ -21,7 +21,7 @@ class Square:
         if typy(value) is not int:
             raise TypeError("size must be an integer")
         else:
-            if value > 0:
+            if value >= 0:
                 self.__size = value
             else:
                 raise ValueError("size must be >= 0")
