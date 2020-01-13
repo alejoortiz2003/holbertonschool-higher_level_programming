@@ -1,0 +1,28 @@
+Module ``3-print_square.txt`` module
+==============================
+
+Using ``print_square``
+---------------------
+
+Import function:
+        >>> print_square = __import__("4-print_square").print_square
+
+check module docstring:
+        >>> m = __import__("4-print_square").__doc__
+        >>> len(m) > 1
+        True
+
+Check function docstring:
+	 >>> f = __import__("4-print_square").print_square.__doc__
+         >>> len(f) > 1
+         True
+
+Check non-int number:
+	 >>> print_square(3.15)
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+	 >>> print_square(-15.45)
+	 Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer

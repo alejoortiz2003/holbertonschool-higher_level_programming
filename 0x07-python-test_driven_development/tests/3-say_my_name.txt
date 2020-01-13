@@ -1,19 +1,19 @@
 Module ``3-say_my_name.txt`` module
 ==============================
 
-Using ``msay_my_name``
+Using ``say_my_name``
 ---------------------
 
-Import function
+Import function:
         >>> say_my_name = __import__("3-say_my_name").say_my_name
 
-check module docstring
+check module docstring:
         >>> m = __import__("3-say_my_name").__doc__
         >>> len(m) > 1
         True
 
-check function docstring
-        >>> f = __import__("2-matrix_divided").matrix_divided.__doc__
+check function docstring:
+        >>> f = __import__("3-say_my_name").say_my_name.__doc__
         >>> len(f) > 1
         True
 
