@@ -20,3 +20,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_noargs(self):
         """no arguments passed to the function"""
         self.assertIsNone(max_integer())
+
+if __name__ == "__main__":
+    unittest.main()
