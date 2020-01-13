@@ -1,4 +1,4 @@
-Module ``3-print_square.txt`` module
+Module ``4-print_square.txt`` module
 ==============================
 
 Using ``print_square``

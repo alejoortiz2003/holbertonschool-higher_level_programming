@@ -1,0 +1,30 @@
+Module ``5-text_indentation.txt`` module
+==============================
+
+Using ``text_indentation``
+---------------------
+
+Import function:
+        >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+check module docstring:
+        >>> m = __import__("5-text_indentation").__doc__
+        >>> len(m) > 1
+        True
+
+check for arg like None:
+        >>> text_indentation(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+chek for a lot spaces and wildcards:
+        >>> text_indentation("       Holberton.   School is a software academy???   ")
+        Holberton.
+        <BLANKLINE>
+        School is a software academy?
+        <BLANKLINE>
+        ?
+        <BLANKLINE>
+        ?
+        <BLANKLINE>
