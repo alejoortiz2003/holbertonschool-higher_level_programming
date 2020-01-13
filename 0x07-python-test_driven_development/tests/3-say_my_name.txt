@@ -1,0 +1,34 @@
+Module ``3-say_my_name.txt`` module
+==============================
+
+Using ``msay_my_name``
+---------------------
+
+Import function
+        >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+check module docstring
+        >>> m = __import__("3-say_my_name").__doc__
+        >>> len(m) > 1
+        True
+
+check function docstring
+        >>> f = __import__("2-matrix_divided").matrix_divided.__doc__
+        >>> len(f) > 1
+        True
+
+Check str last_name:
+         >>> say_my_name("Holberton", None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Check str first_name:
+         >>> say_my_name(None, "School")
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for 1 arg:
+	 >>> say_my_name("Holberton")
+	 My name is Holberton 
