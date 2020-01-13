@@ -1,0 +1,25 @@
+Module ``2-matrix_divided.txt`` module
+==============================
+
+Using ``matrix_divided``
+---------------------
+
+Import function
+        >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+check module docstring
+        >>> m = __import__("2-matrix_divided").__doc__
+        >>> len(m) > 1
+        True
+
+check function docstring
+        >>> f = __import__("2-matrix_divided").matrix_divided.__doc__
+        >>> len(f) > 1
+        True
+
+Check if matrix is a list:
+	 >>> matrix = "Holberton"
+	 >>> matrix_divided(matrix, 1)
+	 Traceback (most recent call last):
+         ...
+         TypeError: matrix must be a matrix (list of lists) of integers/floats

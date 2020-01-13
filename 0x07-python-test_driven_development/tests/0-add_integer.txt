@@ -1,0 +1,30 @@
+Module ``0-add_integer`` module
+==============================
+
+Using ``add_integer``
+---------------------
+
+Import function
+        >>> add_integer = __import__("0-add_integer").add_integer
+
+check module docstring
+        >>> m = __import__("0-add_integer").__doc__
+        >>> len(m) > 1
+        True
+
+check function docstring
+        >>> f = __import__("0-add_integer").add_integer.__doc__
+        >>> len(f) > 1
+        True
+
+check normal addition:
+        >>> add_integer(7, 3)
+        10
+
+check negative sum:
+        >>> add_integer(-15, 20)
+        5
+
+check float sum:
+        >>> add_integer(1.99, 2.99)
+        3
