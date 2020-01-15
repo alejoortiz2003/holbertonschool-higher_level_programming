@@ -8,14 +8,13 @@ class Rectangle:
     """creating a rectangle"""
     number_of_instances = 0
     print_symbol = '#'
-    def __init__(self, width = 0, height = 0):
+
+    def __init__(self, width=0, height=0):
         """init the rectangle"""
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
 
-
-    
     @property
     def width(self):
         """private instance width"""
@@ -29,7 +28,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """private instance height"""
@@ -59,7 +58,8 @@ class Rectangle:
         """Function that print a rectangle filled with "#" """
         if self.area() == 0:
             return ""
-        return '\n'.join([str(self.print_symbol) * self.__width] * self.__height)
+        return '\n'.join(
+            [str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         """Function that return a replicate of rectangle"""
@@ -67,4 +67,4 @@ class Rectangle:
 
     def __del__(self):
         type(self).number_of_instances -= 1
-        print ("Bye Rectangle")
+        print("Bye rectangle...")
