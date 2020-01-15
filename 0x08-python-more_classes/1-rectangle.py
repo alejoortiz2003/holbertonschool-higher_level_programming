@@ -30,7 +30,7 @@ class Rectangle:
         """private instance heigth"""
         return self.__height
 
-    @heigth.setter
+    @height.setter
     def height(self, value):
         """configuration for private attributes of heigth"""
         if type(value) is not int:
