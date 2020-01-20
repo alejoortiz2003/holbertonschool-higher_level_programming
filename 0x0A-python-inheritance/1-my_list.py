@@ -3,9 +3,9 @@
 
 
 class MyList(list):
-    """"""
+    """here create a subclass"""
     def __init__(self):
-        """here create a subclass"""
+        """start the object here"""
         super().__init__()
 
     def print_sorted(self):
