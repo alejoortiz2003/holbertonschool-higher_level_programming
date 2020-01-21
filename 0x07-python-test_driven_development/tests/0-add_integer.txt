@@ -28,3 +28,11 @@ check negative sum:
 check float sum:
         >>> add_integer(1.99, 2.99)
         3
+
+Check float and int:
+	 >>> add_integer(3.5, 5)
+	 8
+
+Check int and float:
+	 >>> add_integer(15, 1.8)
+	 16
