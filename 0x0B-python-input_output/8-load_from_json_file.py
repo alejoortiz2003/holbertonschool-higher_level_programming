@@ -9,5 +9,5 @@ import json
 
 def load_from_json_file(filename):
     """function that return the string representation of an object"""
-    with open(filename, mode="w", encoding='utf-8') as a_file:
+    with open(filename, mode="r", encoding='utf-8') as a_file:
         return (json.load(a_file))
