@@ -17,7 +17,7 @@ try:
 except:
     f_json = []
 
-for i in argv[:1]:
+for i in argv[1:]:
     f_json.append(i)
 
 save_to_json_file(f_json, filename)
