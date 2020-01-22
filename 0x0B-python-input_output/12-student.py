@@ -24,3 +24,11 @@ class Student:
                 pass
         return _dict
 
+    def reload_from_json(self, json):
+        """replaces attributes from the Student instance"""
+        for key in json:
+            try:
+                setattr(self, key, json[key])
+            except:
+                pass
+
