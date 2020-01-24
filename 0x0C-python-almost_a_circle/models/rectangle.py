@@ -6,6 +6,7 @@ here you can find the class Rectangle
 
 from models.base import Base
 
+
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
@@ -13,26 +14,21 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        self.id = id
         super().__init__(id)
 
     @property
-    #"""get value width"""
     def width(self):
         return self.__width
 
     @property
-    #"""get value height"""
     def height(self):
         return self.__height
 
     @property
-    #"""get value x"""
     def x(self):
         return self.__x
 
     @property
-    #"""get value y"""
     def y(self):
         return self.__y
 
@@ -77,4 +73,31 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        for a in range(self.__y):
+            print("\n", end="")
+        for i in range(self.__height):
+            for k in range(self.__x):
+                print(" ", end="")
+            for l in range(self.__width):
+                print('#', end="")
+            print()
 
+    def __str__(self):
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
+                                                                 self.__x,
+                                                                 self.__y,
+                                                                 self.__width,
+                                                                 self.__height)
+
+    def update(self, *args):
+        for i, value in enumerate(args):
+            if i == 0:
+                self.id = value
+            elif i == 1:
+                self.__width = value
+            elif i == 2:
+                self.__height = value
+            elif i == 3:
+                self.__x = value
+            elif i == 4:
+                self.__y = value
