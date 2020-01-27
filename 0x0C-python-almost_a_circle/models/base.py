@@ -38,3 +38,11 @@ class Base:
         fn = cls.__name__+".json"
         with open(fn, "w") as file:
             file.write(obj)
+
+    def from_json_string(json_string):
+        """function from_json_string"""
+        ls = []
+        if json_string is None:
+            return ls
+        else:
+            return json.loads(json_string)
