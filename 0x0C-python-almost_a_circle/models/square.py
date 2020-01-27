@@ -21,11 +21,8 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """setter of size"""
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        if value <= 0:
-            raise ValueError("size must be > 0")
-        self.__size = value
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """function __str___"""
@@ -56,9 +53,9 @@ class Square(Rectangle):
 
         def to_dictionary(self):
             """function to_dictionary"""
-            dictionary = {}
-            dictionary["id"] = self.id
-            dictionary["size"] = self.size
-            dictionary["x"] = self.x
-            dictionary["y"] = self.y
-            return dictionary
+            dic = {}
+            dic["id"] = self.id
+            dic["size"] = self.size
+            dic["x"] = self.x
+            dic["y"] = self.y
+            return dic
