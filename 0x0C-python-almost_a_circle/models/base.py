@@ -28,6 +28,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Function save_to_file"""
         obj = []
         if list_objs is None:
             obj = []
