@@ -8,6 +8,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """here start the class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         self.width = width
@@ -18,18 +19,22 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """function width"""
         return self.__width
 
     @property
     def height(self):
+        """function height"""
         return self.__height
 
     @property
     def x(self):
+        """function x"""
         return self.__x
 
     @property
     def y(self):
+        """function y"""
         return self.__y
 
     @width.setter
@@ -73,6 +78,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """here start the function display"""
         for a in range(self.__y):
             print("\n", end="")
         for i in range(self.__height):
@@ -83,6 +89,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """here start the function __str___"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
                                                                  self.__x,
                                                                  self.__y,
@@ -90,6 +97,7 @@ class Rectangle(Base):
                                                                  self.__height)
 
     def update(self, *args, **kwargs):
+        """here start the update"""
         if args:
             for i, value in enumerate(args):
                 if i == 0:
@@ -115,6 +123,7 @@ class Rectangle(Base):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """here start the function dictionary"""
         dictionary = {}
         dictionary["id"] = self.id
         dictionary["width"] = self.width

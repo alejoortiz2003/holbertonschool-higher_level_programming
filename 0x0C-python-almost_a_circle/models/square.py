@@ -8,12 +8,14 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """here start the class"""
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
         self.size = size
 
     @property
     def size(self):
+        """function for size"""
         return self.__size
 
     @size.setter
@@ -26,10 +28,12 @@ class Square(Rectangle):
         self.__size = value
 
     def __str__(self):
+        """function __str___"""
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
             self.id, self.x, self.y, self.__size)
 
     def update(self, *args, **kwargs):
+        """function update"""
         if args:
             for i, value in enumerate(args):
                 if i == 0:
@@ -51,6 +55,7 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
         def to_dictionary(self):
+            """function to_dictionary"""
             dictionary = {}
             dictionary["id"] = self.id
             dictionary["size"] = self.size
