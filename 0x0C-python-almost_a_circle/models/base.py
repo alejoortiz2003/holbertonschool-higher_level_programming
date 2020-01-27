@@ -4,6 +4,9 @@ here you can find the class Base
 """
 
 
+import json
+
+
 class Base:
     __nb_objects = 0
 
@@ -14,3 +17,8 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            list_dictionaries = []
+        return json.dumps(list_dictionaries)
