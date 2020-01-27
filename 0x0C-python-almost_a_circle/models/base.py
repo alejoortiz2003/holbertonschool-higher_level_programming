@@ -33,7 +33,7 @@ class Base:
         if list_objs is None:
             obj = []
         else:
-            obj = [x.to_dictionary() for i in list_objs]
+            obj = [x.to_dictionary() for x in list_objs]
         obj = cls.to_json_string(obj)
         fn = cls.__name__+".json"
         with open(fn, "w") as file:
