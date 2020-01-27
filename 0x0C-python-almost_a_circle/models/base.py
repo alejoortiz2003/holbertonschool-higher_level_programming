@@ -35,6 +35,6 @@ class Base:
         else:
             obj = [x.to_dictionary() for i in list_objs]
         obj = cls.to_json_string(obj)
-        fn = cls.__name__ + ".json"
+        fn = cls.__name__+".json"
         with open(fn, "w") as file:
-            f.write(obj)
+            file.write(obj)
