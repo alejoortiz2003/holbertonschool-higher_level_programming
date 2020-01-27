@@ -58,4 +58,4 @@ class Square(Rectangle):
         dic["size"] = self.size
         dic["x"] = self.x
         dic["y"] = self.y
-        return d
+        return dic
