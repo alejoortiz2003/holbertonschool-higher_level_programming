@@ -62,13 +62,13 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """function load_from_file"""
-        filename = cls.__name__+".json"
+        filename = cls.__name__ + ".json"
         file = []
         try:
-            with open(filename, "r") as f:
+            with open(filename, 'r') as f:
                 file = cls.from_json_string(f.read())
             for i, value in enumerate(file):
-                file[i] = cls.create(**l[i])
+                file[i] = cls.create(**file[i])
         except:
             pass
         return file
