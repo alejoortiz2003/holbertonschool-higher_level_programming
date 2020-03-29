@@ -13,8 +13,8 @@ if __name__ == '__main__':
                            passwd=arv[2], db=argv[3], charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = cur.fetchall()
-    for row in rows:
+    query_rows = cur.fetchall()
+    for row in query_rows:
         print(row)
     cur.close()
     conn.close()
