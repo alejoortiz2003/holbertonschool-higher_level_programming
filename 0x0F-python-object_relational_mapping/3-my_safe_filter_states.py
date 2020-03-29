@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Write a script that takes in an argument and displays
+# script that lists all cities from the database
 # all values in the statestable of hbtn_0e_0_usa where
 
 import MySQLdb
