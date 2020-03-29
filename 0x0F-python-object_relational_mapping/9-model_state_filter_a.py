@@ -23,5 +23,5 @@ if __name__ == '__main__':
     session = Session()
     table_state = session.query(State.name.like("%a%")).order_by(State.id)
     for state in table_state:
-        print("{}: {}".format(table_state.id, table_state.name))
+        print("{}: {}".format(state.id, state.name))
     session.close()
