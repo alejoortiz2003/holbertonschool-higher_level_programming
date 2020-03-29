@@ -21,7 +21,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     # This session is bound to provided engine
     session = Session()
-    pfs = session.query(State).order_by(State.id)
+    pfs = session.query(State).order_by(State.id).first()
     if pfs is not Note:
         print("{}: {}".format(pfs.id, pfs.name))
     else:
