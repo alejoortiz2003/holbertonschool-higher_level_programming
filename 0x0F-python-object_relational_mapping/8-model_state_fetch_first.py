@@ -22,7 +22,7 @@ if __name__ == '__main__':
     # This session is bound to provided engine
     session = Session()
     pfs = session.query(State).order_by(State.id).first()
-    if pfs is not Note:
+    if pfs is not None:
         print("{}: {}".format(pfs.id, pfs.name))
     else:
         print('Nothing')
