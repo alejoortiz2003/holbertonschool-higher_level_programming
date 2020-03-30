@@ -21,7 +21,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     # This session is bound to provided engine
     session = Session()
-    tb = session.query(State).filter_by(id==2).first()
-    state.name= 'New Mexico'
+    tb = session.query(State).filter_by(id=2).first()
+    state.name = 'New Mexico'
     session.commit()
     session.close()
