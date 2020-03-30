@@ -22,6 +22,6 @@ if __name__ == '__main__':
     # This session is bound to provided engine
     session = Session()
     tb = session.query(State).filter_by(id=2).first()
-    state.name = 'New Mexico'
+    tb.name = 'New Mexico'
     session.commit()
     session.close()
