@@ -22,7 +22,7 @@ if __name__ == '__main__':
     # This session is bound to provided engine
     session = Session()
     a = '%a%'
-    tb = session.query(State).filter_by(State.name.like(a))
+    tb = session.query(State).filter(State.name.like(a))
     for state in tb:
         session.delete(state)
     session.commit()
