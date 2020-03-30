@@ -22,6 +22,7 @@ if __name__ == '__main__':
     # This session is bound to provided engine
     session = Session()
     add_state = State(name='Louisiana')
+    session.add(add_state)
     tb = session.query(State).filter_by(name='Louisiana').first()
     print(str(tb.id))
     session.commit()
